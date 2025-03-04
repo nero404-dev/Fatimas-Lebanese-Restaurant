@@ -1,0 +1,237 @@
+header {
+    background-image: url('pictures/Fatima_s_Food_bg.jpeg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    height: 35vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    color: white;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(0.5);
+}
+
+/* header h1 {
+    color: white;
+    border-bottom: 1px solid white;
+} */
+
+main {
+    margin: 20px 0;
+}
+
+section h1 {
+    text-align: center;
+    color: var(--color_3);
+    background-color: var(--color_1);
+    padding: 10px 0;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+    cursor: default;
+    margin: 30px 0;
+    text-align: center;
+}
+
+section ul li {
+    display: inline;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+section ul li a {
+    color: var(--color_2);
+    text-decoration: none;
+}
+
+section ul li a:hover {
+    color: var(--color_1);
+}
+
+#back {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+#back:hover {
+    text-decoration: underline var(--color_3);
+}
+
+#back .fa {
+    padding-right: 5px;
+}
+
+#back:hover .fa {
+    color: var(--color_3);
+}
+
+section {
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+}
+
+section h2 {
+    text-align: center;
+    color: var(--color_2);
+    border-bottom: 2px solid var(--color_1);
+    padding: 10px 0;
+}
+
+/* section .cats {
+    column-count: 6;
+    column-gap: 20px;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+section .cats .cat {
+    display: block;
+    width: 100%;
+    background-color: var(--color_2);
+    border-radius: 5px;
+    margin: 30px 0;
+    cursor: pointer;
+} */
+
+section .cats {
+    column-count: 6; /* Maintain 6 columns */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to maintain layout */
+    width: 100%;
+    margin: 0 auto;
+    align-items: center; /* Align items to the start */
+    justify-content: center;
+}
+
+section .cats .cat {
+    flex: 1 0 16%; /* Allow each cat to take up 16% of the row */
+    max-width: 15%; /* Ensure max width is 16% for 6 columns */
+    background-color: var(--color_2);
+    border-radius: 5px;
+    margin: 10px; /* Adjust margin for spacing */
+    cursor: pointer;
+}
+
+section .cats .cat .image {
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    filter: brightness(0.7);
+    object-fit: cover;
+}
+
+section .cats .cat .image:hover {
+    transform: scale(0.95);
+    transition-duration: 0.4s;
+    overflow: auto;
+    filter: brightness(1);
+}
+
+section .cats .cat .image img {
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+section .cats .cat p {
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding: 15px 0;
+    color: white;
+}
+
+.top-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.top-btn a button {
+    cursor: pointer;
+    padding: 5px 8px;
+    background-color: var(--color_4);
+    border: 1px solid var(--color_5);
+    color: var(--color_1);
+}
+
+.top-btn a:hover button {
+    color: var(--color_3);
+}
+
+footer {
+    background-image: url(pictures/d2d2d2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 15vh;
+}
+
+@media screen and (max-width: 414px) {
+    header {
+        background-image: url('pictures/Fatima_s_Food_bg.jpeg'); /* Replace with your image */
+        background-size: cover;
+        background-position: center;
+        height: 20vh; /* Full height of the viewport */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        color: white;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        filter: brightness(0.5);
+    }
+    #back {
+        color: white;
+        text-decoration: underline white;
+    }
+    section {
+        width: 80%;
+    }
+    section h1 {
+        padding: 5px 0;
+    }
+    section ul {
+        margin: 20px 0;
+    }
+    section ul li {
+        display: block;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+    section ul li a {
+        color: var(--color_2);
+        text-decoration: none;
+    }
+    section .cats {
+        column-count: 1;
+        display: block;
+    }
+    section .cats .cat {
+        flex: unset; /* Allow each cat to take up 16% of the row */
+        max-width: 100%; /* Ensure max width is 16% for 6 columns */
+        margin: 20px 0;
+    }
+    section .cats .cat .image {
+        filter: brightness(1);
+    }
+    section .cats .cat .image img {
+        height: 100%;
+    }
+}

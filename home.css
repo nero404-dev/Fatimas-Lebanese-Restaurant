@@ -1,0 +1,592 @@
+header {
+    background-image: url('pictures/sergey-kotenev-l4U1u0bso6E-unsplash_copy.jpg');
+    /* background-image: url(pictures/Fatima_s_Food_bg.jpeg); */
+    background-size: cover;
+    background-position: center;
+    height: 80vh; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    color: white;
+    text-align: center;
+}
+
+header .logo {
+    width: 100%;
+    background-color: var(--color_1);
+}
+
+header .logo img {
+    width: 20%;
+    height: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-family: cursive;
+    color: white;
+    text-shadow: 1px 1px 1px var(--color_1);
+    border-bottom: 2px solid transparent;
+    cursor: default;
+}
+
+header h1:hover {
+    animation-name: hover-underline;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hover-underline {
+    from   {border-bottom: 2px solid var(--color_1);}
+    to  {border-bottom: 2px solid var(--color_2);}
+}
+
+.flag {
+    width: 100%;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.flag img {
+    width: 5%;
+    height: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    cursor: default;
+    margin: 30px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+nav ul li #active {
+    /* text-decoration: underline #457e45; */
+    color: var(--color_3);
+    cursor: default;
+    border: none;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid var(--color_1);
+}
+
+main {
+    padding: 0 20px;
+    color: black; /* Adjust color as necessary */
+}
+
+/* main .quote {
+    margin: 30px -20px; Optional: Add padding to the quote itself if needed
+    padding: 0 20px;
+} */
+
+section {
+    max-width: 800px; /* Limit width of content */
+    margin: 0 auto; /* Center the section */
+    text-align: left; /* Align text left */
+}
+
+section h2 {
+    color: var(--color_2);
+    margin: 30px 0;
+    border-left: 3px solid var(--color_1);
+    padding-left: 5px;
+}
+
+section p {
+    color: var(--color_5);
+}
+
+.quote {
+    background-image: url(pictures/Horizontal\ Lebanese\ Flag_copy_2.png);
+    max-width: 100%;
+    height: 30vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 50px auto;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.quote h1 {
+    color: white;
+}
+
+.quote h1 .fa {
+    color: var(--color_2);
+}
+
+main .quote {
+    margin: 30px -20px; /* Optional: Add padding to the quote itself if needed */
+    padding: 0 20px;
+}
+
+#menu .btn {
+    width: fit-content;
+    display: block;
+    margin: 30px auto;
+}
+
+#menu .btn a {
+    text-decoration: none;
+}
+
+#menu .btn a button {
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 40px;
+    background-color: transparent;
+    border: 1px solid var(--color_1);
+    /* color: var(--color_1); */
+    color: var(--color_2);
+    border-radius: 5px;
+}
+
+#menu .btn a button:hover {
+    /* background-color: #bd9152; */
+    background-image: linear-gradient(to right, var(--color_1), white, white, white, var(--color_1));
+    /* color: var(--color_2); */
+}
+
+#menu .btn a button .fa {
+    padding-left: 5px;
+    font-weight: 600;
+}
+
+.menu-pdf {
+    margin: 30px 0;
+}
+
+.menu-pdf .fa {
+    color: var(--color_2);
+    padding-right: 5px;
+}
+
+.menu-pdf a {
+    color: var(--color_1);
+}
+
+#reservations a {
+    color: var(--color_5);
+    font-weight: 600;
+}
+
+#reservations a:hover {
+    color: var(--color_3);
+}
+
+footer {
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+footer .contact {
+    background-image: url(pictures/Fatima_s_Food_bg_copy_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 100%; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 30px 0;
+}
+
+footer .contact .row_1 .image {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+footer .contact .row_1 .image img {
+    width: 100%;
+    height: 100%;
+}
+
+footer .contact .row_1 h3 {
+    color: var(--color_2);
+    margin: 20px 0;
+}
+
+footer .contact .row_1 h3 .fa {
+    color: var(--color_1);
+}
+
+footer .contact .row_2 {
+    margin: 10px 0;
+    text-align: left;
+}
+
+footer .contact .row_2 p {
+    color: var(--color_4);
+}
+
+footer .contact .row_2 p a {
+    color: var(--color_4);
+    padding-left: 5px;
+}
+
+footer .contact .row_2 p u {
+    color: var(--color_3);
+}
+
+.line_between {
+    width: 80%;
+    margin: 20px auto;
+    height: 1px;
+    background-color: grey;
+}
+
+footer .contact .row_3 {
+    margin: 10px 0;
+}
+
+footer .contact .row_3 a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: var(--color_3);
+    font-size: 18px;
+}
+
+footer .contact .row_3 a:hover {
+    color: var(--color_1);
+}
+
+footer .contact .row_3 #icon_br {
+    display: none;
+}
+
+footer .contact .top {
+    margin: 10px 0;
+}
+
+footer .contact .top a button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: var(--color_3);
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+footer .contact .top a button:hover {
+    background-color: var(--color_7);
+    border: 1px solid var(--color_3);
+}
+
+footer .copyright {
+    padding: 15px 0;
+    background-color: var(--color_4);
+}
+
+footer .copyright p {
+    text-align: center;
+    justify-content: center;
+    display: block;
+    margin: 0 auto;
+    color: var(--color_5);
+    font-size: 12px;
+}
+
+@media screen and (max-width: 414px) {
+    header {
+        height: 100vh; /* Full height of the viewport */
+        background-attachment: fixed;
+    }
+    header .logo img {
+        width: 40%;
+    }
+    header h1 {
+        font-size: 25px;
+        margin: 10px 0;
+    }
+    nav ul {
+        margin: 0;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .flag img {
+        width: 15%;
+    }
+    #about {
+        height: 300px;
+        overflow: auto;
+    }
+    #services {
+        height: 500px;
+    }
+    .quote {
+        max-width: 100%;
+        height: 20vh;
+        margin: 30px auto;
+        background-attachment: unset;
+    }
+    .quote h1 {
+        font-size: 16px;
+    }
+    #menu .btn a button {
+        padding: 10px 60px;
+        background-image: linear-gradient(to right, var(--color_1), white, white, white, white, var(--color_1));
+        color: var(--color_2);
+        border: 1px solid var(--color_1);
+        border-radius: 5px;
+        font-size: 18px;
+    }
+    footer {
+        font-size: 11px;
+    }
+    footer .contact {
+        height: 100%;
+        padding: 30px 0;
+    }
+    footer .contact .row_1 .image {
+        width: 30%;
+    }
+    footer .contact .row_1 h3 {
+        margin: unset;
+        padding: 0 15px;
+    }
+    footer .contact .row_2 {
+        padding: 0 15px;
+    }
+    .line_between {
+        margin: 10px auto;
+    }
+    footer .contact .row_3 a {
+        font-size: 14px;
+    }
+    footer .contact .row_3 a .fa {
+        margin: 10px;
+    }
+    footer .contact .row_3 #icon_br {
+        display: block;
+    }
+    footer .contact .row_3 {
+        margin: unset;
+    }
+    footer .copyright p {
+        font-size: 11px;
+    }
+    footer .contact .row_2 #link a {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.portfolio {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.cats {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    column-count: 4;
+    column-gap: 20px;
+}
+
+.cat {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    /* background-color: var(--color_3); */
+}
+
+.cat a {
+    text-decoration: none;
+}
+
+.cat .image {
+    width: 100%;
+    height: 100%;
+}
+
+.cat .image img {
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+    height: 100%;
+    filter: brightness(0.5);
+}
+
+.cat h3 {
+    display: none;
+}
+
+.overlay_from_up {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color_3_transparent);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.cat:hover .overlay_from_up {
+    bottom: 0;
+    height: 100%;
+}
+
+.overlay_from_left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color_2_transparent);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.cat:hover .overlay_from_left {
+    width: 100%;
+}
+
+.overlay_from_right {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: var(--color_2_transparent);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.cat:hover .overlay_from_right {
+    width: 100%;
+    left: 0;
+}
+
+.overlay_from_down {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color_1_transparent);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.cat:hover .overlay_from_down {
+    height: 100%;
+}
+
+.overlay_from_down .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay_from_up .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.overlay_from_left .text, .overlay_from_right .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@media screen and (max-width: 414px) {
+    .portfolio {
+        width: 100%;
+        margin: 30px auto;
+    }
+    .cats {
+        width: 100%;
+        height: fit-content;
+        display: block;
+        column-count: 1;
+        column-gap: unset;
+    }
+    .cat {
+        width: 100%;
+        border-radius: 5px;
+        background-color: var(--color_2);
+        padding: 0;
+        margin: 30px 0;
+    }
+    .cat .image img {
+        width: 100%;
+        border-radius: unset;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+    .overlay_from_up, .overlay_from_left, .overlay_from_right, .overlay_from_down {
+        display: none;
+    }
+    .cat:hover .overlay_from_up, .cat:hover .overlay_from_left, .cat:hover .overlay_from_right, .cat:hover .overlay_from_down {
+        display: none;
+    }
+    .overlay_from_down .text, .overlay_from_up .text, .overlay_from_left .text, .overlay_from_right .text {
+        display: none;
+    }
+    .cat h3 {
+        display: block;
+        color: white;
+        text-align: center;
+        margin: auto;
+        padding: 20px 0;
+    }
+    #menu {
+        height: 100%;
+        overflow: none;
+    }
+}

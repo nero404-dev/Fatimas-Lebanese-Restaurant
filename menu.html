@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Fatima's Lebanese Restaurant</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="pictures/">
+</head>
+<body>
+    <header id="top">
+        <!-- <h1>Menu</h1> -->
+    </header>
+    <main>
+        <section>
+            <h1>Menu</h1>
+
+            <ul>
+                <li><a href="#most-popular">Most Popular</a></li>
+                <li><a href="#rolls">Rolls</a></li>
+                <li><a href="#finger-foods">Finger Foods</a></li>
+                <li><a href="#vege-containers">Vegetables Containers</a></li>
+                <li><a href="#meat-containers">Meat Containers</a></li>
+                <li><a href="#mixed-plates-and-combos">Mixed Plates & Combos</a></li>
+                <li><a href="#sweets">Sweets</a></li>
+                <li><a href="#beverage">Beverage</a></li>
+                <li><a href="#bread">Bread</a></li>
+            </ul>
+
+            <a id="back" href="home.html"><i class="fa fa-angle-left" aria-hidden="true"></i> back</a>
+
+            <h2 id="most-popular">Most Popular</h2>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(0)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 10.jpg">
+                    </div>
+                    <p>Tabbouleh</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(1)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 3.jpg">
+                    </div>
+                    <p>Vine Leaves</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(2)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 18.jpg">
+                    </div>
+                    <p>Baba Ghanoush</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(3)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 26.jpg">
+                    </div>
+                    <p>Vegetarian Mixed Plate</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(4)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 27.jpg">
+                    </div>
+                    <p>Garlic Dip</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(5)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 11.jpg">
+                    </div>
+                    <p>Falafel Roll</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="cats">
+                
+                <div class="cat" onclick="goToDetail(6)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 7.jpg">
+                    </div>
+                    <p>Cauliflower</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(7)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 33.jpg">
+                    </div>
+                    <p>Meat Mixed Plate</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(8)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 20.jpg">
+                    </div>
+                    <p>Ayran Yogurt drink</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(9)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 14.jpg">
+                    </div>
+                    <p>Hommus</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(10)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 32.jpg">
+                    </div>
+                    <p>Falafel</p>
+                </div>
+    
+                <div class="cat" onclick="goToDetail(11)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 5.jpg">
+                    </div>
+                    <p>Lady Fingers (Meat)</p>
+                </div>
+            </div>
+
+            <h2 id="rolls">Rolls</h2>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(12)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 11.jpg">
+                    </div>
+                    <p>Garlic Chicken Roll</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(13)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 11.jpg">
+                    </div>
+                    <p>Falafel Roll</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(14)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 11.jpg">
+                    </div>
+                    <p>Kafta Roll</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(15)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 11.jpg">
+                    </div>
+                    <p>Leb Sausage Roll</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(16)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 11.jpg">
+                    </div>
+                    <p>Vine Leaves Roll</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(17)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 11.jpg">
+                    </div>
+                    <p>Lamb Kebab Roll</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(18)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 11.jpg">
+                    </div>
+                    <p>Mixed Meat Roll</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(19)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 11.jpg">
+                    </div>
+                    <p>Mixed Vegetable Roll</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(20)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 11.jpg">
+                    </div>
+                    <p>Kibbi Roll</p>
+                </div>
+
+                <!-- <div class="cat"></div>
+                <div class="cat"></div>
+                <div class="cat"></div> -->
+            </div>
+
+            <h2 id="finger-foods">Finger Foods</h2>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(21)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 5.jpg">
+                    </div>
+                    <p>Lady Fingers (Meat)</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(22)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 3.jpg">
+                    </div>
+                    <p>Vine Leaves</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(23)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 31.jpg">
+                    </div>
+                    <p>Spinach Triangle</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(24)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 13.jpg">
+                    </div>
+                    <p>Fried Kibbi</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(25)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 23.jpg">
+                    </div>
+                    <p>Cabbage Rolls (Vege)</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(26)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 32.jpg">
+                    </div>
+                    <p>Falafel</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(27)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 5.jpg">
+                    </div>
+                    <p>Lady Fingers (Vege)</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(28)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 39.jpg">
+                    </div>
+                    <p>Cabbage Rolls (Meat)</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(29)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 29.jpg">
+                    </div>
+                    <p>Omelette</p>
+                </div>
+
+                <!-- <div class="cat"></div>
+                <div class="cat"></div> -->
+            </div>
+
+            <h2 id="vege-containers">Vegetable Containers</h2>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(30)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 10.jpg">
+                    </div>
+                    <p>Tabbouleh</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(31)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 14.jpg">
+                    </div>
+                    <p>Hommus</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(32)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 36.jpg">
+                    </div>
+                    <p>Green Beans</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(33)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 27.jpg">
+                    </div>
+                    <p>Garlic Dip</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(34)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 15.jpg">
+                    </div>
+                    <p>Kidney Beans</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(35)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 17.jpg">
+                    </div>
+                    <p>Rice & Lentils</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(36)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 7.jpg">
+                    </div>
+                    <p>Cauliflower</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(37)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 30.jpg">
+                    </div>
+                    <p>Garlic Potatoes</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(38)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 24.jpg">
+                    </div>
+                    <p>Potato & Parsley</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(39)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 18.jpg">
+                    </div>
+                    <p>Baba Ghanoush</p>
+                </div>
+
+                <!-- <div class="cat"></div>
+                <div class="cat"></div> -->
+            </div>
+
+            <h2 id="meat-containers">Meat Containers</h2>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(40)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 28.jpg">
+                    </div>
+                    <p>Shish Kebab</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(41)">
+                    <div class="image">
+                        <img src="pictures/menu/no_image.jpg">
+                    </div>
+                    <p>Garlic Chicken</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(42)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 35.jpg">
+                    </div>
+                    <p>Kafta</p>
+                </div>
+
+                <!-- <div class="cat"></div>
+                <div class="cat"></div>
+                <div class="cat"></div> -->
+            </div>
+
+            <h2 id="mixed-plates-and-combos">Mixed Plates & Combos</h2>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(43)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 33.jpg">
+                    </div>
+                    <p>Meat Mixed Plate</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(44)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 26.jpg">
+                    </div>
+                    <p>Vegetarian Mixed Plate</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(45)">
+                    <div class="image">
+                        <img src="pictures/menu/no_image.jpg">
+                    </div>
+                    <p>Meat Roll Combo</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(46)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 33.jpg">
+                    </div>
+                    <p>Meat Mixed Plate Combo</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(47)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 26.jpg">
+                    </div>
+                    <p>Vegetarian Mixed Plate Combo</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(48)">
+                    <div class="image">
+                        <img src="pictures/menu/no_image.jpg">
+                    </div>
+                    <p>Falafel Roll Combo</p>
+                </div>
+            </div>
+
+            <h2 id="sweets">Sweets</h2>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(49)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 9.jpg">
+                    </div>
+                    <p>Baklava</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(50)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 38.jpg">
+                    </div>
+                    <p>Turkish Delight</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(51)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 4.jpg">
+                    </div>
+                    <p>Date Cake</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(52)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 2.jpg">
+                    </div>
+                    <p>Rice Pudding</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(53)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 37.jpg">
+                    </div>
+                    <p>Semolina Cake</p>
+                </div>
+
+                <!-- <div class="cat"></div> -->
+            </div>
+
+            <h2 id="beverage">Beverage</h2>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(54)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 12.jpg">
+                    </div>
+                    <p>Coke (no sugar)</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(55)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 20.jpg">
+                    </div>
+                    <p>Ayran Yogurt drink</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(56)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 6.jpg">
+                    </div>
+                    <p>Lift</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(57)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 16.jpg">
+                    </div>
+                    <p>Bunderberg gingerbeer</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(58)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 1.jpg">
+                    </div>
+                    <p>Still Water</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(59)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 25.jpg">
+                    </div>
+                    <p>Coke</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(60)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 22.jpg">
+                    </div>
+                    <p>Noah's Creative Juices</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(61)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 8.jpg">
+                    </div>
+                    <p>Sprite</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(62)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 21.jpg">
+                    </div>
+                    <p>Fanta</p>
+                </div>
+
+                <div class="cat" onclick="goToDetail(63)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 34.jpg">
+                    </div>
+                    <p>Lightly Sparkling Water</p>
+                </div>
+
+                <!-- <div class="cat"></div>
+                <div class="cat"></div> -->
+            </div>
+
+            <h2 id="bread">Bread</h2>
+
+            <div class="cats">
+                <div class="cat" onclick="goToDetail(64)">
+                    <div class="image">
+                        <img src="pictures/menu/Food 19.jpg">
+                    </div>
+                    <p>Lebanese Bread</p>
+                </div>
+
+                <!-- <div class="cat"></div>
+                <div class="cat"></div>
+                <div class="cat"></div>
+                <div class="cat"></div>
+                <div class="cat"></div>
+                <div class="cat"></div> -->
+            </div>
+        </section>
+
+        <div class="top-btn">
+            <a href="#top"><button><i class="fa fa-chevron-up" aria-hidden="true"></i></button></a>
+        </div>
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script>
+        function goToDetail(index) {
+            // Get the clicked food item's image and name
+            const foodItem = document.querySelectorAll('.cat')[index];
+            const foodImage = foodItem.querySelector('img').src;
+            const foodName = foodItem.querySelector('p').textContent;
+    
+            // Redirect to output.html with image and name as URL parameters
+            window.location.href = `output.html?index=${index}&image=${encodeURIComponent(foodImage)}&name=${encodeURIComponent(foodName)}`;
+        }
+    </script>
+</body>
+</html>

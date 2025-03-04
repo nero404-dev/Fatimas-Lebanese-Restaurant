@@ -1,0 +1,26 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    --color_1: #c2191f;
+    --color_1_transparent: #c2191f88;
+    --color_2: #008d3e;
+    --color_2_transparent: #008d3d88;
+    --color_3: #ffb025;
+    --color_3_transparent: #ffaf2588;
+
+    --color_4: #d2d2d2;
+    --color_5: #4d4d4d;
+    --color_6: #d2d2d2ba;
+    --color_7: #d2d2d226;
+
+}

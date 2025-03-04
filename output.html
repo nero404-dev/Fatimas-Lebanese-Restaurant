@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu ~ Food Info | Fatima's Lebanese Restaurant</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="pictures/">
+</head>
+<body>
+
+    <a id="back" href="menu.html"><i class="fa fa-angle-left" aria-hidden="true"></i> back</a>
+
+    <div id="food-detail"></div>
+
+
+
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+    
+        // Get food item details from URL
+        const foodIndex = getUrlParameter('index');
+        const foodImage = getUrlParameter('image');
+        const foodName = getUrlParameter('name');
+    
+        // Array of additional details for each food item
+        const foodDetails = [
+            // Tabbouleh
+            [
+                {
+                    "price": 12.00,
+                    "description": "Finely chopped parsley, tomato, and shallots mint with crushed wheat. Dressed in olive oil and lemon juice. ",
+                    "sizes": [
+                        {"size": "Small: ", "price": 12.00},
+                        {"size": "Medium: ", "price": 19.00, "note": "Popular"},
+                        {"size": "Large: ", "price": 25.00}
+                    ]
+                }
+            ],
+            // Vine Leaves
+            [
+                {
+                    "price": 6.50,
+                    "description": "(1 Piece) Rice, tomato, parsley, and onion. Wrapped in vine leaves. ",
+                    "sizes": [
+                        {"size": "Small (3 Pieces): ", "price": 18.50, "note": "Popular"},
+                        {"size": "Medium (4 Pieces): ", "price": 24.50},
+                        {"size": "Large (5 Pieces): ", "price": 30.50}
+                    ]
+                }
+            ],
+            // Baba Ghanoush
+            [
+                {
+                    "price": 10.00,
+                    "description": "Smoky eggplant dip with tahini, garlic, and lemon juice.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 10.00},
+                        {"size": "Medium: ", "price": 15.00},
+                        {"size": "Large: ", "price": 20.00}
+                    ]
+                }
+            ],
+            // Vegetarian Mixed Plate
+            [
+                {
+                    "price": 18.00,
+                    "description": "A mix of vegetarian favorites including falafel, hummus, and tabbouleh.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 18.00},
+                        {"size": "Medium: ", "price": 25.00},
+                        {"size": "Large: ", "price": 30.00}
+                    ]
+                }
+            ],
+            // Garlic Dip
+            [
+                {
+                    "price": 5.00,
+                    "description": "Creamy garlic dip, perfect for bread or meat.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 5.00},
+                        {"size": "Medium: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Falafel Roll
+            [
+                {
+                    "price": 8.00,
+                    "description": "Crispy falafel wrapped in fresh pita bread with veggies and tahini.",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Meat Mixed Plate
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Tabbouleh
+            [
+                {
+                    "price": 12.00,
+                    "description": "Finely chopped parsley, tomato, and shallots mint with crushed wheat. Dressed in olive oil and lemon juice. ",
+                    "sizes": [
+                        {"size": "Small: ", "price": 12.00},
+                        {"size": "Medium: ", "price": 19.00, "note": "Popular"},
+                        {"size": "Large: ", "price": 25.00}
+                    ]
+                }
+            ],
+            // Vine Leaves
+            [
+                {
+                    "price": 6.50,
+                    "description": "(1 Piece) Rice, tomato, parsley, and onion. Wrapped in vine leaves. ",
+                    "sizes": [
+                        {"size": "Small (3 Pieces): ", "price": 18.50, "note": "Popular"},
+                        {"size": "Medium (4 Pieces): ", "price": 24.50},
+                        {"size": "Large (5 Pieces): ", "price": 30.50}
+                    ]
+                }
+            ],
+            // Baba Ghanoush
+            [
+                {
+                    "price": 10.00,
+                    "description": "Smoky eggplant dip with tahini, garlic, and lemon juice.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 10.00},
+                        {"size": "Medium: ", "price": 15.00},
+                        {"size": "Large: ", "price": 20.00}
+                    ]
+                }
+            ],
+            // Vegetarian Mixed Plate
+            [
+                {
+                    "price": 18.00,
+                    "description": "A mix of vegetarian favorites including falafel, hummus, and tabbouleh.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 18.00},
+                        {"size": "Medium: ", "price": 25.00},
+                        {"size": "Large: ", "price": 30.00}
+                    ]
+                }
+            ],
+            // Garlic Dip
+            [
+                {
+                    "price": 5.00,
+                    "description": "Creamy garlic dip, perfect for bread or meat.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 5.00},
+                        {"size": "Medium: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Falafel Roll
+            [
+                {
+                    "price": 8.00,
+                    "description": "Crispy falafel wrapped in fresh pita bread with veggies and tahini.",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Meat Mixed Plate
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Tabbouleh
+            [
+                {
+                    "price": 12.00,
+                    "description": "Finely chopped parsley, tomato, and shallots mint with crushed wheat. Dressed in olive oil and lemon juice. ",
+                    "sizes": [
+                        {"size": "Small: ", "price": 12.00},
+                        {"size": "Medium: ", "price": 19.00, "note": "Popular"},
+                        {"size": "Large: ", "price": 25.00}
+                    ]
+                }
+            ],
+            // Vine Leaves
+            [
+                {
+                    "price": 6.50,
+                    "description": "(1 Piece) Rice, tomato, parsley, and onion. Wrapped in vine leaves. ",
+                    "sizes": [
+                        {"size": "Small (3 Pieces): ", "price": 18.50, "note": "Popular"},
+                        {"size": "Medium (4 Pieces): ", "price": 24.50},
+                        {"size": "Large (5 Pieces): ", "price": 30.50}
+                    ]
+                }
+            ],
+            // Baba Ghanoush
+            [
+                {
+                    "price": 10.00,
+                    "description": "Smoky eggplant dip with tahini, garlic, and lemon juice.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 10.00},
+                        {"size": "Medium: ", "price": 15.00},
+                        {"size": "Large: ", "price": 20.00}
+                    ]
+                }
+            ],
+            // Vegetarian Mixed Plate
+            [
+                {
+                    "price": 18.00,
+                    "description": "A mix of vegetarian favorites including falafel, hummus, and tabbouleh.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 18.00},
+                        {"size": "Medium: ", "price": 25.00},
+                        {"size": "Large: ", "price": 30.00}
+                    ]
+                }
+            ],
+            // Garlic Dip
+            [
+                {
+                    "price": 5.00,
+                    "description": "Creamy garlic dip, perfect for bread or meat.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 5.00},
+                        {"size": "Medium: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Falafel Roll
+            [
+                {
+                    "price": 8.00,
+                    "description": "Crispy falafel wrapped in fresh pita bread with veggies and tahini.",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Meat Mixed Plate
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Tabbouleh
+            [
+                {
+                    "price": 12.00,
+                    "description": "Finely chopped parsley, tomato, and shallots mint with crushed wheat. Dressed in olive oil and lemon juice. ",
+                    "sizes": [
+                        {"size": "Small: ", "price": 12.00},
+                        {"size": "Medium: ", "price": 19.00, "note": "Popular"},
+                        {"size": "Large: ", "price": 25.00}
+                    ]
+                }
+            ],
+            // Vine Leaves
+            [
+                {
+                    "price": 6.50,
+                    "description": "(1 Piece) Rice, tomato, parsley, and onion. Wrapped in vine leaves. ",
+                    "sizes": [
+                        {"size": "Small (3 Pieces): ", "price": 18.50, "note": "Popular"},
+                        {"size": "Medium (4 Pieces): ", "price": 24.50},
+                        {"size": "Large (5 Pieces): ", "price": 30.50}
+                    ]
+                }
+            ],
+            // Baba Ghanoush
+            [
+                {
+                    "price": 10.00,
+                    "description": "Smoky eggplant dip with tahini, garlic, and lemon juice.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 10.00},
+                        {"size": "Medium: ", "price": 15.00},
+                        {"size": "Large: ", "price": 20.00}
+                    ]
+                }
+            ],
+            // Vegetarian Mixed Plate
+            [
+                {
+                    "price": 18.00,
+                    "description": "A mix of vegetarian favorites including falafel, hummus, and tabbouleh.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 18.00},
+                        {"size": "Medium: ", "price": 25.00},
+                        {"size": "Large: ", "price": 30.00}
+                    ]
+                }
+            ],
+            // Garlic Dip
+            [
+                {
+                    "price": 5.00,
+                    "description": "Creamy garlic dip, perfect for bread or meat.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 5.00},
+                        {"size": "Medium: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Falafel Roll
+            [
+                {
+                    "price": 8.00,
+                    "description": "Crispy falafel wrapped in fresh pita bread with veggies and tahini.",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Meat Mixed Plate
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Tabbouleh
+            [
+                {
+                    "price": 12.00,
+                    "description": "Finely chopped parsley, tomato, and shallots mint with crushed wheat. Dressed in olive oil and lemon juice. ",
+                    "sizes": [
+                        {"size": "Small: ", "price": 12.00},
+                        {"size": "Medium: ", "price": 19.00, "note": "Popular"},
+                        {"size": "Large: ", "price": 25.00}
+                    ]
+                }
+            ],
+            // Vine Leaves
+            [
+                {
+                    "price": 6.50,
+                    "description": "(1 Piece) Rice, tomato, parsley, and onion. Wrapped in vine leaves. ",
+                    "sizes": [
+                        {"size": "Small (3 Pieces): ", "price": 18.50, "note": "Popular"},
+                        {"size": "Medium (4 Pieces): ", "price": 24.50},
+                        {"size": "Large (5 Pieces): ", "price": 30.50}
+                    ]
+                }
+            ],
+            // Baba Ghanoush
+            [
+                {
+                    "price": 10.00,
+                    "description": "Smoky eggplant dip with tahini, garlic, and lemon juice.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 10.00},
+                        {"size": "Medium: ", "price": 15.00},
+                        {"size": "Large: ", "price": 20.00}
+                    ]
+                }
+            ],
+            // Vegetarian Mixed Plate
+            [
+                {
+                    "price": 18.00,
+                    "description": "A mix of vegetarian favorites including falafel, hummus, and tabbouleh.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 18.00},
+                        {"size": "Medium: ", "price": 25.00},
+                        {"size": "Large: ", "price": 30.00}
+                    ]
+                }
+            ],
+            // Garlic Dip
+            [
+                {
+                    "price": 5.00,
+                    "description": "Creamy garlic dip, perfect for bread or meat.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 5.00},
+                        {"size": "Medium: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Falafel Roll
+            [
+                {
+                    "price": 8.00,
+                    "description": "Crispy falafel wrapped in fresh pita bread with veggies and tahini.",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Meat Mixed Plate
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Tabbouleh
+            [
+                {
+                    "price": 12.00,
+                    "description": "Finely chopped parsley, tomato, and shallots mint with crushed wheat. Dressed in olive oil and lemon juice. ",
+                    "sizes": [
+                        {"size": "Small: ", "price": 12.00},
+                        {"size": "Medium: ", "price": 19.00, "note": "Popular"},
+                        {"size": "Large: ", "price": 25.00}
+                    ]
+                }
+            ],
+            // Vine Leaves
+            [
+                {
+                    "price": 6.50,
+                    "description": "(1 Piece) Rice, tomato, parsley, and onion. Wrapped in vine leaves. ",
+                    "sizes": [
+                        {"size": "Small (3 Pieces): ", "price": 18.50, "note": "Popular"},
+                        {"size": "Medium (4 Pieces): ", "price": 24.50},
+                        {"size": "Large (5 Pieces): ", "price": 30.50}
+                    ]
+                }
+            ],
+            // Baba Ghanoush
+            [
+                {
+                    "price": 10.00,
+                    "description": "Smoky eggplant dip with tahini, garlic, and lemon juice.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 10.00},
+                        {"size": "Medium: ", "price": 15.00},
+                        {"size": "Large: ", "price": 20.00}
+                    ]
+                }
+            ],
+            // Vegetarian Mixed Plate
+            [
+                {
+                    "price": 18.00,
+                    "description": "A mix of vegetarian favorites including falafel, hummus, and tabbouleh.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 18.00},
+                        {"size": "Medium: ", "price": 25.00},
+                        {"size": "Large: ", "price": 30.00}
+                    ]
+                }
+            ],
+            // Garlic Dip
+            [
+                {
+                    "price": 5.00,
+                    "description": "Creamy garlic dip, perfect for bread or meat.",
+                    "sizes": [
+                        {"size": "Small: ", "price": 5.00},
+                        {"size": "Medium: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Falafel Roll
+            [
+                {
+                    "price": 8.00,
+                    "description": "Crispy falafel wrapped in fresh pita bread with veggies and tahini.",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Meat Mixed Plate
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Meat Mixed Plate
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            // Cauliflower
+            [
+                {
+                    "price": 3.00,
+                    "description": "bla",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 8.00},
+                        {"size": "Large: ", "price": 12.00}
+                    ]
+                }
+            ],
+            [
+                {
+                    "price": 5.50,
+                    "description": "A bag of Lebanese bread with 7 loaves. ",
+                    "sizes": [
+                        {"size": "Regular: ", "price": 5.50},
+                        {"size": "Large: ", "price": 8.00, "note": "large 7 loaves"}
+                    ]
+                }
+            ]
+            
+        ];
+    
+        // Function to get a random detail from the array
+        function getRandomDetail(detailsArray) {
+            const randomIndex = Math.floor(Math.random() * detailsArray.length);
+            return detailsArray[randomIndex];
+        }
+    
+        // Display the food details dynamically
+        const foodDetailDiv = document.getElementById('food-detail');
+    
+        // Check if the foodIndex is valid
+        if (foodIndex !== null && foodDetails[foodIndex]) {
+            const food = getRandomDetail(foodDetails[foodIndex]);
+            foodDetailDiv.innerHTML = `
+                <img src="${decodeURIComponent(foodImage)}" alt="${decodeURIComponent(foodName)}">
+                <h1>${decodeURIComponent(foodName)}</h1>
+                <p>${food.description}</p>
+                <h2>Price: $${food.price.toFixed(2)}</h2>
+                <h3>Choice of size:</h3>
+                <ul>
+                    ${food.sizes.map(size => `
+                        <li>${size.size} + $${(size.price - food.price).toFixed(2)}${size.note ? ` <span class="note">(${size.note})</span>` : ''}</li>
+                    `).join('')}
+                </ul>
+            `;
+        } else {
+            foodDetailDiv.innerHTML = '<p>Food item not found.</p>';
+        }
+    </script>
+
+
+</body>
+</html>

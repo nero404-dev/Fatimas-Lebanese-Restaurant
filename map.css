@@ -1,0 +1,67 @@
+/* Set the height of the iframe */
+iframe {
+    display: block;
+    width: 97%;
+    margin: 0 auto;
+    height: 70vh; /* Set desired height */
+    border: 0;
+}
+
+h1 {
+    margin-left: 20px;
+    color: var(--color_2);
+}
+
+h1 .fa {
+    color: var(--color_1);
+}
+
+p {
+    margin-left: 20px;
+    color: var(--color_5);
+}
+
+#copyLink, #shareLink {
+    color: var(--color_5);
+    cursor: pointer;
+}
+
+#copyLink:hover, #shareLink:hover {
+    color: var(--color_3);
+}
+
+#shareLink {
+    position: absolute;
+    right: 20px;
+}
+
+#back {
+    color: var(--color_5);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#back:hover {
+    text-decoration: underline var(--color_3);
+}
+
+#back .fa {
+    padding-right: 5px;
+}
+
+#back:hover .fa {
+    color: var(--color_3);
+}
+
+@media screen and (max-width: 414px) {
+    iframe {
+        width: 90%;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    #back {
+        color: var(--color_5);
+        text-decoration: underline var(--color_5);
+    }
+}

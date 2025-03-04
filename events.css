@@ -1,0 +1,114 @@
+/* html {
+    background-color: var(--color_4);
+} */
+
+header {
+    margin: 30px 0;
+}
+
+#back {
+    color: var(--color_5);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#back:hover {
+    text-decoration: underline var(--color_3);
+}
+
+#back .fa {
+    padding-right: 5px;
+}
+
+#back:hover .fa {
+    color: var(--color_3);
+}
+
+header h1, header h3 {
+    text-align: center;
+}
+
+header h1 {
+    color: var(--color_2);
+}
+
+header h3 {
+    color: var(--color_3);
+}
+
+.cats {
+    column-count: 3;
+    column-gap: 20px;
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.cats .cat {
+    display: block;
+    width: 100%;
+}
+
+.cats .cat .image {
+    position: relative;
+    width: 100%;
+}
+
+.cats .cat .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.cats .cat .image .date {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+
+.cats .cat .image .date p {
+    background-color: var(--color_6);
+    padding: 10px;
+    color: var(--color_5);
+}
+
+.cats .cat h2 {
+    color: var(--color_2);
+}
+
+.cats .cat .time p {
+    color: var(--color_5);
+}
+
+.cats .cat .time p .fa {
+    color: var(--color_1);
+}
+
+.cats .cat .info {
+    height: 180px;
+    overflow: auto;
+}
+
+.cats .cat .info p {
+    color: var(--color_5);
+    line-height: 24px;
+}
+
+@media screen and (max-width: 414px) {
+    header {
+        margin: 10px 0;
+    }
+    #back {
+        color: var(--color_5);
+        text-decoration: underline var(--color_5);
+    }
+    .cats {
+        column-count: 1;
+        column-gap: 20px;
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .cats .cat {
+        margin: 50px 0;
+    }
+}

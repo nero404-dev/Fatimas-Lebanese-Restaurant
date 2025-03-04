@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url(pictures/d2d2d2_aus_leb.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--color_4);
+}
+
+.container {
+    text-align: center;
+}
+
+.container .logo {
+    width: 100%;
+    /* background-color: #c2191f; */
+}
+
+.container .logo img {
+    width: 30%;
+    height: 100%;
+}
+
+.container h1 {
+    font-family: cursive;
+    /* color: #008d3e; */
+    color: black;
+}
+
+.view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    /* background-color: #007BFF; */
+    background-color: var(--color_3);
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.view-button:hover {
+    /* background-color: #0056b3; */
+    background-color: var(--color_3_transparent);
+}
+
+@media screen and (max-width: 414px) {
+    body {
+        background-image: none;
+    }
+    .container .logo {
+        background-color: var(--color_1);
+    }
+}
